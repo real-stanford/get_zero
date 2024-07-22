@@ -1,0 +1,10 @@
+train_batch_size: 4
+eval_batch_size: 1000
+
+num_epochs: 50
+
+lr:
+  start: 1e-3
+
+defaults:
+  - Base

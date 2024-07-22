@@ -1,0 +1,21 @@
+Link length variant of 189
+
+palm_lower
+├── 1
+│   └── dip_long
+│       └── 3
+│           └── fingertip
+├── 12
+│   └── pip_4
+│       └── 13
+│           └── thumb_pip
+│               └── 15
+│                   └── thumb_fingertip
+└── 9
+    └── mcp_joint_3_long
+        └── 8
+            └── pip_3
+                └── 10
+                    └── dip_3_long
+                        └── 11
+                            └── fingertip_3

@@ -1,0 +1,39 @@
+<!-- 
+a
+└── 0
+    └── b
+        └── 1
+            └── c
+                ├── 2
+                │   └── d
+                └── 3
+                    └── e
+ -->
+
+<robot name="toy_example">
+    <link name="a"></link>
+    <link name="b"></link>
+    <link name="c"></link>
+    <link name="d"></link>
+    <link name="e"></link>
+
+    <joint name="0">
+        <parent link="a"/>
+        <child link="b"/>
+    </joint>
+
+    <joint name="1">
+        <parent link="b"/>
+        <child link="c"/>
+    </joint>
+
+    <joint name="2">
+        <parent link="c"/>
+        <child link="d"/>
+    </joint>
+
+    <joint name="3">
+        <parent link="c"/>
+        <child link="e"/>
+    </joint>
+</robot>

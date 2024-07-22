@@ -1,0 +1,15 @@
+# @package _global_
+experiment: ET_WPCE
+
+model:
+  embodiment_encoding: graphormer
+  graphormer:
+    positional_encoding: none
+    attention:
+      enable_spatial_encoding: False
+      enable_parent_encoding: True
+      enable_child_encoding: True
+      enable_edge_encoding: False
+
+defaults:
+  - ET

@@ -1,0 +1,9 @@
+# @package _global_
+experiment: GET_NSE
+model:
+  graphormer:
+    attention:
+      enable_spatial_encoding: False
+
+defaults:
+  - GET

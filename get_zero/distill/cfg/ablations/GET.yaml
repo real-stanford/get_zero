@@ -1,0 +1,3 @@
+# @package _global_
+experiment: GET
+# no modifications since default config has all features of method enabled

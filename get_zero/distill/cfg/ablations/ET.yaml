@@ -1,0 +1,6 @@
+# @package _global_
+experiment: ET
+model:
+  embodiment_encoding: none
+objective:
+  include_self_modeling: False

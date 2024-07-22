@@ -1,0 +1,47 @@
+experiment: ''
+seed: 0
+gpu: 0
+checkpoint: ''
+
+should_train: True
+should_finetune: False
+test_only: False
+
+# Support for custom config during finetuning stage
+finetuning_overrides:
+  # config specified here is with respect to global context and will be merged in to override configs when in finetuning mode
+  # to add additional config over CLI you will need to prepend '+' if the config is not already listed here
+  train:
+    eval_best_checkpoint_split: 'val'
+    
+    num_epochs: 5
+    embodiment_eval_epoch_freq: 1
+    embodiment_eval_start_epoch: 0
+
+    lr:
+      start: 1e-4
+
+    current_training_mode: finetune
+    train_split_name: val_train
+
+wandb_activate: True
+wandb_group: ''
+wandb_entity: null
+wandb_project: 'get_zero'
+wandb_tags: []
+
+defaults:
+  - mode: Policy
+  - objective: ${mode}
+  - model: Default${mode}
+  - task: LeapHandRot
+  - dataset: ${task}
+  - tokenization: Default
+  - train: Default${mode}
+  - override hydra/job_logging: disabled
+  - _self_
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

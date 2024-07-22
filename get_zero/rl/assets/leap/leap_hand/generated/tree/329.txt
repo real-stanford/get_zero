@@ -1,0 +1,35 @@
+Link length variant of 001
+
+palm_lower
+├── 1
+│   └── mcp_joint
+│       └── 0
+│           └── pip
+│               └── 2
+│                   └── dip
+│                       └── 3
+│                           └── fingertip_long
+├── 12
+│   └── pip_4
+│       └── 13
+│           └── thumb_pip
+│               └── 14
+│                   └── thumb_dip
+│                       └── 15
+│                           └── thumb_fingertip
+├── 5
+│   └── mcp_joint_2_long
+│       └── 4
+│           └── pip_2
+│               └── 6
+│                   └── dip_2_long
+│                       └── 7
+│                           └── fingertip_2
+└── 9
+    └── mcp_joint_3
+        └── 8
+            └── pip_3
+                └── 10
+                    └── dip_3
+                        └── 11
+                            └── fingertip_3_long

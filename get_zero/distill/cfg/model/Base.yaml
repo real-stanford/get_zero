@@ -1,0 +1,34 @@
+embodiment_encoding: graphormer # options are 'graphormer', 'fixed', 'learned', 'centrality' or 'none'
+positional_encoding:
+  dropout: 0.1
+graphormer:
+  positional_encoding: none
+  attention:
+    embedding_init:
+      type: normal
+      sigma: 0.02
+    bias_before_softmax: True
+    enable_spatial_encoding: True
+    enable_parent_encoding: True
+    enable_child_encoding: True
+    enable_edge_encoding: False
+    edge_encoding_size: 8
+    edge_name_to_id: ${....task.link_name_to_id}
+    longest_edge_path: ${....task.max_joint_to_joint_distance}
+transformer:
+  token_embed_dim: 512 # must be evenly divisible by num_attention_heads
+  feedforward_dim: 1024
+  num_attention_heads: 16
+  num_layers: 8
+  dropout: 0.1
+  enable_input_layer_norm: True
+  obs_property_embed_dim: 4
+head_defaults:
+  units: [16]
+  activation: elu
+  output_dim: null # will be set in script
+  squeeze_output_dim: False # if output_dim == 1, then remove the output_dim from the returned output if True, otherwise this value is ignored; note that output_dim is set by distill.py
+heads: {}
+
+max_dof_count: ${..task.max_dof_count}
+max_degree_count: ${..task.max_degree_count}

@@ -1,0 +1,22 @@
+include_self_modeling: True
+policy:
+  loss_weight: 1
+policy_forward_kinematics:
+  loss_weight: 2
+num_serial_chains:
+  loss_weight: 0
+degree_count:
+  loss_weight: 0
+parent_count:
+  loss_weight: 0
+child_count:
+  loss_weight: 0
+parent_child_pose:
+  loss_weight: 0
+serial_chain_length:
+  loss_weight: 0
+parent_link_id:
+  loss_weight: 0 # we have moved away from using link ID
+
+defaults:
+  - Base

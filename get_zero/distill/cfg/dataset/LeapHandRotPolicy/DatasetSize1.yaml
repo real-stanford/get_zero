@@ -1,0 +1,10 @@
+# @package _global_.dataset.policy
+
+name: DatasetSize1
+train_dirs: ['001']
+test_dirs: []
+custom_splits:
+  - new_connectivity: ['004', '024', '046', '071', '098', '122', '139', '142', '200', '204']
+
+defaults:
+  - LeapHandRotPolicy/Base

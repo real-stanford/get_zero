@@ -1,0 +1,8 @@
+# @package _global_
+experiment: ET_WCE
+
+model:
+  embodiment_encoding: centrality
+
+defaults:
+  - ET

@@ -1,0 +1,18 @@
+# @package _global_
+experiment: ET_WSM_WEE
+
+objective:
+  include_self_modeling: True
+
+model:
+  embodiment_encoding: graphormer
+  graphormer:
+    positional_encoding: none
+    attention:
+      enable_spatial_encoding: False
+      enable_parent_encoding: False
+      enable_child_encoding: False
+      enable_edge_encoding: True
+
+defaults:
+  - ET

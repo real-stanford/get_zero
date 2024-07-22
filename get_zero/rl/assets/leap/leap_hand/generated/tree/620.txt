@@ -1,0 +1,25 @@
+Link length variant of 131
+
+palm_lower
+├── 1
+│   └── mcp_joint_long
+│       └── 0
+│           └── pip
+│               └── 2
+│                   └── dip_long
+│                       └── 3
+│                           └── fingertip
+├── 12
+│   └── pip_4
+│       └── 13
+│           └── thumb_pip
+│               └── 15
+│                   └── thumb_fingertip_long
+├── 5
+│   └── dip_2_long
+│       └── 7
+│           └── fingertip_2
+└── 9
+    └── dip_3_long
+        └── 11
+            └── fingertip_3

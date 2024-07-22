@@ -1,0 +1,34 @@
+# @package _global_.train.params
+
+network:
+  name: actor_critic
+  separate: False
+
+  space:
+    continuous:
+      mu_activation: None
+      sigma_activation: None
+      mu_init:
+        name: default
+      sigma_init:
+        name: const_initializer
+        val: 0
+      fixed_sigma: True
+
+  mlp:
+    units: [512, 256, 128]
+    activation: elu
+    d2rl: False
+
+    initializer:
+      name: default
+    regularizer:
+      name: None
+
+  rnn:
+    name: gru
+    units: 256
+    layers: 1
+    before_mlp: true
+    concat_input: true
+    layer_norm: true

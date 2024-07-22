@@ -1,0 +1,8 @@
+# @package _global_
+experiment: GET_NCE
+model:
+  graphormer:
+    positional_encoding: none
+
+defaults:
+  - GET

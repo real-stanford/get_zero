@@ -1,0 +1,18 @@
+policy:
+  name: PaperDataset
+  train_dirs: ['001', '002', '003', '006', '007', '008', '009', '010', '011', '012', '013', '014', '021', '022', '023', '026', '051', '056', '095', '103', '119', '120', '121', '123', '124', '125', '126', '127', '129', '130', '131', '132', '134', '140', '141', '144', '154', '164', '165', '169', '174', '189', '194', '221']
+  validation_dirs: ['004', '024', '046', '071', '098', '122', '139', '142', '200', '204'] # includes new_connectivity
+  test_dirs: ['590', '596', '602', '603', '605', '611', '613', '614', '618', '633', '580', '581', '582', '583', '584', '585', '586', '587', '588', '589'] # includes both new_link_length and new_connectivity_and_link_length
+  custom_splits:
+    - new_connectivity: ['004', '024', '046', '071', '098', '122', '139', '142', '200', '204']
+    - new_link_length: ['590', '596', '602', '603', '605', '611', '613', '614', '618', '633'] # corresponding to subset of train embodiments ['001', '009', '021', '022', '026', '120', '123', '124', '129', '221']
+    - new_connectivity_and_link_length: ['580', '581', '582', '583', '584', '585', '586', '587', '588', '589'] # corresponding to validation embodiments ['004', '024', '046', '071', '098', '122', '139', '142', '200', '204']
+  root: ../rl/state_logs/LeapHandRot/
+
+self_model:
+  asset_dir: ../rl/assets/leap/leap_hand/generated/urdf
+  config_dir: ../rl/cfg/embodiment/LeapHand/generated
+  max_embodiments: 236
+
+defaults:
+  - Base

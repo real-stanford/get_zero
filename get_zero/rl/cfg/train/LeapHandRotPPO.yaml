@@ -1,0 +1,10 @@
+# @package _global_.train
+
+params:
+  config:
+    max_epochs: ${resolve_default:1000,${....max_iterations}} # changed as the training examples on the LEAP sim repo set this to 1000
+    player:
+      play_steps: ${.....test_steps}
+
+defaults:
+  - LeapHandRot/OrigRepo

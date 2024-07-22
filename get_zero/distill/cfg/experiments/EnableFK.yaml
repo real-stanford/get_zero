@@ -1,0 +1,5 @@
+# @package _global_.objective
+
+include_self_modeling: True
+policy_forward_kinematics:
+  loss_weight: 2

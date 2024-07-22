@@ -1,0 +1,19 @@
+# @package _global_.task
+link_name_to_id:
+  palm_lower: 0
+  mcp_joint: 1
+  pip: 2
+  dip: 3
+  fingertip: 4
+  pip_4: 5
+  thumb_pip: 6
+  thumb_dip: 7
+  thumb_fingertip: 8
+  mcp_joint_2: 9
+  pip_2: 10
+  dip_2: 11
+  fingertip_2: 12
+  mcp_joint_3: 13
+  pip_3: 14
+  dip_3: 15
+  fingertip_3: 16

@@ -1,0 +1,21 @@
+# @package _global_.dataset
+
+policy:
+  name: Default
+  device: 'cpu'
+  train_dirs: []
+  validation_dirs: []
+  test_dirs: []
+  root: ''
+  val_proportion: 0.1 # proportion of val data to compute loss on
+  max_split_entries: -1 # max number of entries to use in each dataset split; set to -1 to have no limit
+  max_training_dirs: -1 # max number of training files to read; set to -1 to have no limit
+  max_load_file_threads: 10
+  max_samples_per_file: 500000 # set to -1 to load everything from the file; prioritizes loading all timesteps per batch before loading more batch entries; at minimum all timesteps from 1 embodiment will be loaded
+
+self_model:
+  asset_dir: ''
+  config_dir: ''
+  train_size: 0.8
+  val_size: 0.2
+  max_embodiments: -1

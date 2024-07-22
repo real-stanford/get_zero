@@ -1,0 +1,32 @@
+# @package _global_.task
+
+# Patched version of LEAP rotation task that includes camera sensors for video recordings and updates to support different hand hardware ocnfigurations
+
+enableCameraSensors: ${task.env.enableCameraSensors} # For some reason the Env class that the LEAP repo copied from tries to access this parameter from here, rather than from within the env category (perhaps this parameter was moved at some point?). Thus, just reference the value from within env.
+uses_gpu_camera_pipeline: False
+disableRandomizationsDuringTest: False
+
+env:
+  # set to True if you use camera sensors in the environment
+  enableCameraSensors: ${and:${eq:${...record_video_source},"camera"},${...record_video}}
+  hasCameraSensors: True
+  cameraResolution: 512
+
+  logStateInTest: False
+  logStateSuffix: ''
+  tokenizeObservationForPolicy: False
+
+  tokenization: # additional params set externally. See rl_distill.py for details
+    variableGlobalObsSize: 2 # 2 (phase)
+    variableLocalObsSize: 2 # 1 (joint angle pos) + 1 (joint angle pos target)
+
+  robot_asset: ${.asset.handAsset}
+
+  enableForwardKinematicsVis: False # set to true to draw red markers at where the network predicts each joint location is (requires network that ouputs FK estimate like EmbodimentTransformer). Draws green markers at ground truth FK location
+
+sim:
+  physx:
+    max_gpu_contact_pairs: ${mul:${...env.numEnvs},300}
+
+defaults:
+  - LeapHandRot/OrigRepo

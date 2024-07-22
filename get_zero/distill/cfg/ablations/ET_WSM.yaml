@@ -1,0 +1,8 @@
+# @package _global_
+experiment: ET_WSM
+
+objective:
+  include_self_modeling: True
+
+defaults:
+  - ET

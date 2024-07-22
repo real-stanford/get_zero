@@ -1,0 +1,9 @@
+# @package _global_
+experiment: GET_NEE
+model:
+  graphormer:
+    attention:
+      enable_edge_encoding: False
+
+defaults:
+  - GET

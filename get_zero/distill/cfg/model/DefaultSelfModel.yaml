@@ -1,0 +1,8 @@
+transformer:
+  token_embed_dim: 16
+  feedforward_dim: 16
+  num_attention_heads: 2
+  num_layers: 1
+
+defaults:
+  - Base

@@ -1,0 +1,20 @@
+# --------------------------------------------------------
+# LEAP Hand: Low-Cost, Efficient, and Anthropomorphic Hand for Robot Learning
+# https://arxiv.org/abs/2309.06440
+# Copyright (c) 2023 Ananye Agarwal
+# Licensed under The MIT License [see LICENSE for details]
+# --------------------------------------------------------
+# Based on: IsaacGymEnvs
+# Copyright (c) 2018-2022, NVIDIA Corporation
+# Licence under BSD 3-Clause License
+# https://github.com/NVIDIA-Omniverse/IsaacGymEnvs/
+# --------------------------------------------------------
+
+params:
+  config:
+    max_epochs: ${resolve_default:999999,${....max_iterations}} # increasing the limit since we want to keep running until we have filled the grasp cache, not after a specific number of iterations
+    player:
+      games_num: 10000000000000000
+
+defaults:
+  - LeapHandRotPPO

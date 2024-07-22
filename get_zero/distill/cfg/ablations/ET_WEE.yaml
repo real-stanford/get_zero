@@ -1,0 +1,15 @@
+# @package _global_
+experiment: ET_WEE
+
+model:
+  embodiment_encoding: graphormer
+  graphormer:
+    positional_encoding: none
+    attention:
+      enable_spatial_encoding: False
+      enable_parent_encoding: False
+      enable_child_encoding: False
+      enable_edge_encoding: True
+
+defaults:
+  - ET

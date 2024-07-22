@@ -1,0 +1,55 @@
+name: LeapHandRot
+max_dof_count: 16
+max_degree_count: 4
+max_joint_to_joint_distance: 7
+link_name_to_id:
+  palm_lower: 0
+  mcp_joint: 1
+  pip: 2
+  dip: 3
+  fingertip: 4
+  pip_4: 5
+  thumb_pip: 6
+  thumb_dip: 7
+  thumb_fingertip: 8
+  mcp_joint_2: 1
+  pip_2: 2
+  dip_2: 3
+  fingertip_2: 4
+  mcp_joint_3: 1
+  pip_3: 2
+  dip_3: 3
+  fingertip_3: 4
+link_name_to_length:
+  palm_lower: null
+  mcp_joint: 0.0381
+  mcp_joint_long: 0.0531
+  pip: 0.0150
+  dip: 0.0361
+  dip_long: 0.0511
+  fingertip: 0.0500
+  fingertip_long: 0.0650
+  pip_4: 0.0143
+  thumb_pip: 0.0170
+  thumb_dip: 0.0466
+  thumb_dip_long: 0.0616
+  thumb_fingertip: 0.0617
+  thumb_fingertip_long: 0.0767
+  mcp_joint_2: 0.0381
+  mcp_joint_2_long: 0.0531
+  pip_2: 0.0150
+  dip_2: 0.0361
+  dip_2_long: 0.0511
+  fingertip_2: 0.0500
+  fingertip_2_long: 0.0650
+  mcp_joint_3: 0.0381
+  mcp_joint_3_long: 0.0531
+  pip_3: 0.0150
+  dip_3: 0.0361
+  dip_3_long: 0.0511
+  fingertip_3: 0.0500
+  fingertip_3_long: 0.0650
+include_variable_global_obs: true
+include_variable_local_obs: true
+variable_local_obs_joint_state_index: 0
+variable_local_obs_joint_state_normalized: True

@@ -1,0 +1,21 @@
+Link length variant of 095
+
+palm_lower
+├── 1
+│   └── fingertip
+├── 12
+│   └── pip_4
+│       └── 13
+│           └── thumb_pip
+│               └── 14
+│                   └── thumb_dip_long
+│                       └── 15
+│                           └── thumb_fingertip_long
+└── 9
+    └── mcp_joint_3_long
+        └── 8
+            └── pip_3
+                └── 10
+                    └── dip_3
+                        └── 11
+                            └── fingertip_3

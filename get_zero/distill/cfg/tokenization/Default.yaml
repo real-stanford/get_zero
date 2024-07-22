@@ -1,0 +1,29 @@
+enableGeometryEncoding: True
+
+includeDebugBlankLocalObs: False # debug
+includeDebugBlankGlobalObs: False # debug
+includeChildLinkLength: False
+includeJointAxis: False # not needed as all axis match
+includeJointOrigin: True
+includeJointRot: True
+includeJointAngleLimits: False
+includeParentLinkPose: False # not useful as link origin arbitrary
+includeChildLinkPose: False # not useful as link origin arbitrary
+includeParentJointAxis: False # not needed as all axis match
+includeParentJointPose: False # parent info can be seen by looking at other tokens
+includeChildJointAxis: False # not needed as all axis match
+includeChildJointPose: False # child info can be seen by looking at other tokens
+includeNumSerialChains: False
+includeDegreeCount: False
+includeParentCount: False
+includeChildCount: False
+includeChildLinkId: False
+
+obsHistorySize: 6
+flushVariableGlobalObsOnReset: False
+flushVariableLocalObsOnReset: True
+
+linkNameToId: ${..task.link_name_to_id}
+linkNameToLength: ${..task.link_name_to_length}
+includeVariableGlobalObs: ${..task.include_variable_global_obs}
+includeVariableLocalObs: ${..task.include_variable_local_obs}

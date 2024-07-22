@@ -1,0 +1,33 @@
+skip_embodiment_eval: False
+skip_embodiment_baseline_eval: False
+
+train_batch_size: 2048
+eval_batch_size: 16384
+
+optimizer:
+  type: Adam # can be `Adam` or `AdamW`
+  beta1: 0.9
+  beta2: 0.98
+
+eval_best_checkpoint_split: train_and_val # whether to look at metrics from 'train' embodiments or 'val' embodiments when determining best network checkpoint; if there are no validation embodiments then train embodiments will be used to evaluate even if set to 'val'. If 'train_and_val' is given, then uses both train and validation embodiments to determine the best checkpoint. Note there is no option to include test embodiments since you shouldn't optimize based on test embodiments.
+
+num_epochs: 7
+
+# TODO consolidate embodiment_eval parameters under `embodiment_eval` header
+embodiment_eval_epoch_freq: 2
+embodiment_eval_start_epoch: 5
+embodiment_eval_average_last_epochs: 3 # average embodiment eval metrics over the last X epochs to determine the resulting score
+embodiment_eval_skip_mark_best_run: False
+
+lr:
+  schedule: ramp
+  start: 1.5e-4
+  rampup_proportion: 0.15
+
+clip_grads:
+  enabled: True
+  value: 1.0
+  log: False
+
+current_training_mode: train
+train_split_name: train_train

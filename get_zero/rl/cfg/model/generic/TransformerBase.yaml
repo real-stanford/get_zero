@@ -1,0 +1,24 @@
+# @package _global_
+
+task:
+  env:
+    tokenizeObservationForPolicy: True
+    clipObservations: .inf # very important that we do not apply observation clipping (for example the link ID is put in observation and if there is a clipping bound, then it's likely the ID will be out of that range and will be clamped, causing the network to fail to properly work)
+
+train:
+  params:
+    network:
+      name: embodiment_transformer
+
+      # `actor` attribute set externally. See rl_distill.py
+      actor: null
+      
+      # set by task
+      tokenization: ${....task.env.tokenization}
+
+      # set by embodiment
+      robot_asset: ${....task.env.robot_asset}
+      joint_name_to_joint_i: ${....task.env.joint_name_to_joint_i}
+
+    config:
+      normalize_input: False # input normalization (as it's currently implemented) doesn't make sense in context of transformer tokens. Perhaps an alternative input normalization scheme that normalizes each token would be better suited. Additionally, the dof count is encoded into the observation vector and normalization will alter this value, making us unable to read it

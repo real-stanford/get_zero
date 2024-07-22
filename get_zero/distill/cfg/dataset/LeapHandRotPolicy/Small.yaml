@@ -1,0 +1,10 @@
+# @package _global_.dataset.policy
+
+name: Small
+train_dirs: ['001']
+validation_dirs: ['002']
+test_dirs: []
+custom_splits: []
+
+defaults:
+  - LeapHandRotPolicy/Base

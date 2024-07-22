@@ -1,0 +1,21 @@
+includeDebugBlankLocalObs: False
+includeDebugBlankGlobalObs: False
+includeChildLinkLength: False
+includeJointAxis: False
+includeJointOrigin: False
+includeJointRot: False
+includeJointAngleLimits: False
+includeParentLinkPose: False
+includeChildLinkPose: False
+includeParentJointAxis: False
+includeParentJointPose: False
+includeChildJointAxis: False
+includeChildJointPose: False
+includeNumSerialChains: False
+includeDegreeCount: False
+includeParentCount: False
+includeChildCount: False
+includeChildLinkId: False
+
+defaults:
+  - Default

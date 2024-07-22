@@ -1,0 +1,4 @@
+# @package _global_.dataset.policy
+
+defaults:
+  - ../LeapHandRot@_global_.dataset

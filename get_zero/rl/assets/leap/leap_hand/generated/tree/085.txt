@@ -1,0 +1,17 @@
+palm_lower
+├── 1
+│   └── fingertip
+├── 12
+│   └── pip_4
+│       └── 13
+│           └── thumb_pip
+│               └── 14
+│                   └── thumb_dip
+│                       └── 15
+│                           └── thumb_fingertip
+└── 5
+    └── mcp_joint_2
+        └── 4
+            └── pip_2
+                └── 6
+                    └── fingertip_2

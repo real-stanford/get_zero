@@ -1,0 +1,10 @@
+# @package _global_
+experiment: GET_NPCE
+model:
+  graphormer:
+    attention:
+      enable_parent_encoding: False
+      enable_child_encoding: False
+
+defaults:
+  - GET

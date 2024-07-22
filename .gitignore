@@ -1,0 +1,17 @@
+dependencies
+.hypothesis
+.vscode/**
+!.vscode/docker.code-workspace
+*.egg-info
+__pycache__
+runs
+wandb
+**/figures/generated
+**private**
+**/rl/debug
+**/rl/state_logs
+tmp/
+.DS_Store
+*.blend1
+.pytest_cache
+get_zero/figures

@@ -1,0 +1,23 @@
+# @package _global_.dataset.policy
+
+name: WorkingWithLinkLength
+train_dirs: [
+# no link length extensions  
+'001', '002', '003', '006', '007', '008', '009', '010', '011', '012', '013', '014', '021', '022', '023', '026', '051', '056', '095', '103', '119', '120', '121', '123', '124', '125', '126', '127', '129', '130', '131', '132', '134', '140', '141', '144', '154', '164', '165', '169', '174', '189', '194', '221', 
+# link length extensions
+'591', '592', '593', '594', '595', '597', '598', '599', '606', '607', '608', '610', '612', '615', '616', '617', '619', '620', '622', '623', '624', '626', '629'] # note this cannot contain embodiments from `new_link_length` split
+validation_dirs: [
+# `new_connectivity`
+'004', '024', '046', '071', '098', '122', '139', '142', '200', '204',
+# `new_link_length` embodiments for which we do have RL expert
+'590', '602', '603', '605', '611', '613', '614', '618'
+]
+test_dirs: [
+# `new_link_length` embodiments for which we do not have RL expert
+'596', '633',
+# the `new_connectivity_and_link_length` embodiments for which we do not have RL expert
+'580', '581', '582', '583', '584', '585', '586', '587', '588', '589'
+]
+
+defaults:
+  - LeapHandRotPolicy/Base

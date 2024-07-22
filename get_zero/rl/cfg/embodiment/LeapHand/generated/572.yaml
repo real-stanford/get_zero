@@ -1,0 +1,13 @@
+# @package _global_.task.env
+
+asset: {handAsset: leap/leap_hand/generated/urdf/572.urdf}
+canonical_pose: [0.1458, -1.047, 1.7247, -0.2187, 1.2985, 1.6139, 0.9757, 1.0728,
+  -0.1054, 0.029, 1.6039, 0.1227, -0.1084, 0.9652, 1.7317, 0.1071]
+dofCount: 16
+embodiment_name: '572'
+fingertip_indices: [4, 8, 12, 16]
+joint_name_to_joint_i: {'0': 1, '1': 0, '10': 14, '11': 15, '12': 4, '13': 5, '14': 6,
+  '15': 7, '2': 2, '3': 3, '4': 9, '5': 8, '6': 10, '7': 11, '8': 13, '9': 12}
+real_to_sim_indices: [1, 0, 2, 3, 12, 13, 14, 15, 5, 4, 6, 7, 9, 8, 10, 11]
+robot_asset: ${.asset.handAsset}
+sim_to_real_indices: [1, 0, 2, 3, 9, 8, 10, 11, 13, 12, 14, 15, 4, 5, 6, 7]

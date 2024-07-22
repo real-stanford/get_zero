@@ -1,0 +1,13 @@
+palm_lower
+├── 12
+│   └── pip_4
+│       └── 13
+│           └── thumb_pip
+│               └── 15
+│                   └── thumb_fingertip
+├── 5
+│   └── fingertip_2
+└── 9
+    └── dip_3
+        └── 11
+            └── fingertip_3

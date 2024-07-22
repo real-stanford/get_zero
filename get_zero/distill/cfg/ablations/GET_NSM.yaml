@@ -1,0 +1,7 @@
+# @package _global_
+experiment: GET_NSM
+objective:
+  include_self_modeling: False
+
+defaults:
+  - GET

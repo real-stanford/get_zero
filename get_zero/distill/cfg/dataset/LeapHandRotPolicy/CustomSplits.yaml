@@ -1,0 +1,13 @@
+# @package _global_.dataset.policy
+
+name: CustomSplits
+train_dirs: ['001']
+validation_dirs: ['004']
+test_dirs: ['590', '600', '580']
+custom_splits:
+  - new_connectivity: ['004']
+  - new_link_length: ['590', '600']
+  - new_connectivity_and_link_length: ['580']
+
+defaults:
+  - LeapHandRotPolicy/Base

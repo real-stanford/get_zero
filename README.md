@@ -43,6 +43,7 @@ This paper introduces GET-Zero, a model architecture and training procedure for 
     - [Deploy Policy](#deploy-policy)
   - [Misc](#misc)
   - [Support](#support)
+  - [Citation](#citation)
   - [Acknowledgments](#acknowledgments)
 
 ## About
@@ -393,11 +394,19 @@ There are additional scripts that serve miscellaneous functions:
 ## Support
 Please contact Austin Patel at auspatel@stanford.edu for any questions or issues!
 
-<!-- ## Citation
+## Citation
 If you found this repository helpful in your research, please cite:
 ```
-TODO
-``` -->
+@misc{patel2024getzero,
+      title={{GET-Zero}: Graph Embodiment Transformer for Zero-shot Embodiment Generalization}, 
+      author={Austin Patel and Shuran Song},
+      year={2024},
+      eprint={2407.15002},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2407.15002}, 
+}
+```
 
 ## Acknowledgments
 - Isaac Gym tasks and environment creation follows from [IsaacGymEnvs](https://github.com/isaac-sim/IsaacGymEnvs)

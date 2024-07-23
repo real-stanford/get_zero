@@ -2,7 +2,7 @@
 
 [Austin Patel](https://austinapatel.github.io), [Shuran Song](https://shurans.github.io) | Stanford University
 
-[Project Page](https://get-zero-paper.github.io) | [Paper]() | [Dataset (Checkpoints and demonstration data)](https://drive.google.com/drive/folders/1weRRB0YLxTxtuEV44FvWCg8Z1k1fM9sJ?usp=share_link)
+[Project Page](https://get-zero-paper.github.io) | [Paper](https://arxiv.org/abs/2407.15002) | [Dataset (Checkpoints and demonstration data)](https://drive.google.com/drive/folders/1weRRB0YLxTxtuEV44FvWCg8Z1k1fM9sJ?usp=share_link)
 
 ![Teaser](./docs/teaser.png)
 

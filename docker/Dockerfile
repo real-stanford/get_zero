@@ -123,6 +123,11 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
 RUN apt-get install -y ttf-mscorefonts-installer
 USER $USERNAME
 
+# Don't index /opt with pylance
+USER root
+COPY docker/opt_pyrightconfig.json /opt/pyrightconfig.json
+USER $USERNAME
+
 # either chose to copy a version of get_zero that is in the dependencies folder or clone a version from GitHub
 # COPY --chown=$USERNAME dependencies/get_zero/ get_zero/
 RUN git clone https://github.com/real-stanford/get_zero.git

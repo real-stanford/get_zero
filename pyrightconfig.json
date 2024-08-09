@@ -1,0 +1,12 @@
+{
+    "include": [
+        "get_zero",
+    ],
+
+    "exclude": [
+        "**/__pycache__",
+        "**/runs",
+        "**/wandb",
+        "**/state_logs"
+    ]
+}

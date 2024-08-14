@@ -24,6 +24,7 @@ def parse_args():
     parser.add_argument('--gpu', type=int, default=0)
     parser.add_argument('--sim_device_id', type=int, default=-1)
     parser.add_argument('--graphics_device_id', type=int, default=-1)
+    parser.add_argument('--asset_root', default='assets', help='base path to look for assets in')
     parser.add_argument('--asset', default='leap/leap_hand/generated/urdf/001.urdf', help='path relative to `assets` folder. Can be a specific asset, or a directly, in which case all assets from that directly are loaded (up to --max_assets)')
     parser.add_argument('--max_assets', default=10, type=int, help='If --asset corresponds to a directory, then load at most --max_asset assets')
     parser.add_argument('--n_envs', default=1, type=int, help='number of actors to put in environment')
@@ -80,9 +81,9 @@ def open_viewer(args):
     asset_options = gymapi.AssetOptions()
     asset_options.fix_base_link = args.fix_base
 
-    asset_root = "assets"
+    asset_root = args.asset_root
     full_asset_path = os.path.join(asset_root, args.asset)
-    robot_urdf = URDF.load(full_asset_path, load_meshes=False)
+    robot_urdf = URDF.load(full_asset_path, load_meshes=False) if '.urdf' in full_asset_path else None
     if os.path.isdir(full_asset_path):
         asset_fnames = []
         for fname in os.listdir(full_asset_path):
@@ -325,10 +326,13 @@ def open_viewer(args):
                     for i in range(dof_count):
                         print(f'DoF {i} has joint name: \"{asset_joint_dict_invert[i]}\"')
                 if evt.action == "fk" and evt.value > 0:
-                    fk_enabled = True
-                    
-                    fk_joint_i = (fk_joint_i + 1) % gym.get_asset_dof_count(asset_files[0])
-                    print(f'fk switched to joint "{joint_i_to_joint_name[fk_joint_i]}"')
+                    if robot_urdf is None:
+                        print('FK visualization only works with URDF files currently')
+                    else:
+                        fk_enabled = True
+                        
+                        fk_joint_i = (fk_joint_i + 1) % gym.get_asset_dof_count(asset_files[0])
+                        print(f'fk switched to joint "{joint_i_to_joint_name[fk_joint_i]}"')
 
             # if 'f' key is pressed, then the origin of the joint will be drawn on the viewer using forward kinematics (computed outside Isaac Gym). Press 'f' to toggle through joints in sim ordering.
             if fk_enabled:
@@ -395,4 +399,3 @@ if __name__ == '__main__':
     
     while open_viewer(args):
          pass
-    

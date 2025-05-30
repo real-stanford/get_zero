@@ -51,7 +51,7 @@ WORKDIR /opt
 # setup user
 # TODO: one limitation of this apporach is that the user id is fixed (it needs to match the host user ID which is done automatically in `build.sh`), which makes this container less portable for built images running on different machines with different user IDs. This is because user ID has to match when so that files mounted in the Docker container can be properly accessed. To fix this, you could use https://github.com/boxboat/fixuid
 ARG USERID=1000
-RUN useradd -u $USERID --create-home $USERNAME
+RUN useradd -l -u $USERID --create-home $USERNAME
 ENV PATH="/home/$USERNAME/.local/bin:$PATH"
 
 # IsaacGymEnvs clone and change permissions so user can pip install
